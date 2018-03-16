@@ -21,8 +21,8 @@ describe('Age', function() {
   it('gives us the users age in Jupiter years', function(){
     expect(userAge.jupiterYears()).toEqual(3)
   });
-  it('determines how much longer a user has to live on each planet', function(){
-
+  it('determines how much longer a user has to live on earth', function(){
+    expect(userAge.earthExpectancy()).toEqual(78 - userAge.earthYears())
   });
 
 });

@@ -19,5 +19,8 @@ export class Age{
   jupiterYears(){
     return Math.ceil(this.earthYears()/11.86);
   }
+  earthExpectancy(){
+    return (78 - this.earthYears());
+  }
 
 }
