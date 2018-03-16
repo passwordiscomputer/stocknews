@@ -2,7 +2,6 @@ export class Age{
   constructor(birthDate){
     this.birthDate = new Date (birthDate);
   }
-
   earthYears(){
     let current = new Date(Date.now());
     return current.getFullYear() - this.birthDate.getFullYear();
@@ -21,6 +20,18 @@ export class Age{
   }
   earthExpectancy(){
     return (78 - this.earthYears());
+  }
+  mercuryExpectancy(){
+    return Math.ceil(this.earthExpectancy()/.24);
+  }
+  venusExpectancy(){
+    return Math.ceil(this.earthExpectancy()/.62);
+  }
+  marsExpectancy(){
+    return Math.ceil(this.earthExpectancy()/1.88);
+  }
+  jupiterExpectancy(){
+    return Math.ceil(78 - this.earthExpectancy()/11.86);
   }
 
 }
