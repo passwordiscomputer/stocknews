@@ -13,19 +13,19 @@ export class Person{
     let remainingYears = lifeExpectancy - this.baseAge;
     return remainingYears >= 0 ?
     `On planet: ${planet} you have ${this.getYearsOnPlanet(planet, remainingYears)} years til your inevitable death` :
-    `On planet: ${planet} you have lived past your predetermined death by ${-(this.getYearsOnPlanet(planet, remainingYears))}`
+    `On planet: ${planet} you have lived past your predetermined death by ${-(this.getYearsOnPlanet(planet, remainingYears))} years`
   }
 
   getYearsOnPlanet(planet, years) {
     switch (planet) {
     case 'Mercury':
-      return years / 0.24;
+      return Math.ceil(years / 0.24);
     case 'Venus':
-      return years / 0.62;
+      return Math.ceil(years / 0.62);
     case 'Mars':
-      return years / 1.88;
+      return Math.ceil(years / 1.88);
     case 'Jupiter':
-      return years / 11.86;
+      return Math.ceil(years / 11.86);
     default:
       return years;
     }
