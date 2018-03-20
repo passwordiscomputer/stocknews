@@ -1,3 +1,9 @@
+html{
+  background-color: #A7C6DA;
+}
+body{
+  background-color: none;
+}
 .card img{
   width: 70%;
   margin: 0 auto;
